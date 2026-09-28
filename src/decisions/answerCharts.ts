@@ -27,10 +27,19 @@ export function printAnswerCharts(answers: Record<string, JevAnswer>) {
         let details = '';
 
         if (answer.type === 'noul') {
-            values = [
-                ['true', answer.noul],
-                ['false', 1 - answer.noul],
-            ];
+            const trueProbability = Math.max(0, Math.min(1, answer.noul));
+            const falseProbability = 1 - trueProbability;
+            const trueIsHigher = trueProbability >= falseProbability;
+            const falseColor = useColor && !trueIsHigher ? green : useColor ? gray : '';
+            const trueColor = useColor && trueIsHigher ? green : useColor ? gray : '';
+            const falseClear = falseColor ? reset : '';
+            const trueClear = trueColor ? reset : '';
+            const switchTrack = trueIsHigher ? '[────●]' : '[●────]';
+
+            console.log(
+                `  ${falseColor}FALSE ${(falseProbability * 100).toFixed(1)}%${falseClear}  ${switchTrack}  ${trueColor}TRUE ${(trueProbability * 100).toFixed(1)}%${trueClear}`,
+            );
+            continue;
         } else if (answer.type === 'choice') {
             values = Object.entries(answer.probabilities);
             details = ` (selected: ${answer.choice}${answer.confidence === undefined ? '' : `, confidence: ${(answer.confidence * 100).toFixed(0)}%`})`;
