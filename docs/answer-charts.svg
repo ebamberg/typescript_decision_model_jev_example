@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="466" viewBox="0 0 900 466" role="img" aria-labelledby="title description">
+  <title id="title">Representative answer chart console output</title>
+  <desc id="description">Terminal-style output with refund, department, and angry score probability bars.</desc>
+  <rect width="900" height="466" rx="8" fill="#17191c"/>
+  <path d="M0 8a8 8 0 0 1 8-8h884a8 8 0 0 1 8 8v34H0z" fill="#25282d"/>
+  <circle cx="24" cy="21" r="6" fill="#e06c75"/>
+  <circle cx="46" cy="21" r="6" fill="#e5c07b"/>
+  <circle cx="68" cy="21" r="6" fill="#98c379"/>
+  <text x="450" y="26" text-anchor="middle" fill="#abb2bf" font-family="Segoe UI, sans-serif" font-size="13">answer charts</text>
+  <g font-family="Consolas, 'Courier New', monospace" font-size="16">
+    <text x="28" y="79" fill="#56b6c2" font-weight="700">refund</text>
+    <text x="46" y="111" fill="#98c379">true        [</text><text x="183" y="111" fill="#98c379">██████████████████</text><text x="327" y="111" fill="#98c379">------] 77.0%</text>
+    <text x="46" y="139" fill="#858b95">false       [</text><text x="183" y="139" fill="#858b95">██████</text><text x="231" y="139" fill="#858b95">------------------] 23.0%</text>
+
+    <text x="28" y="185" fill="#56b6c2" font-weight="700">department</text><text x="142" y="185" fill="#abb2bf"> (selected: billing, confidence: 100%)</text>
+    <text x="46" y="217" fill="#98c379">billing     [</text><text x="183" y="217" fill="#98c379">████████████████████████</text><text x="375" y="217" fill="#98c379">] 100.0%</text>
+    <text x="46" y="245" fill="#858b95">technical   [</text><text x="183" y="245" fill="#858b95">------------------------] 0.0%</text>
+
+    <text x="28" y="291" fill="#56b6c2" font-weight="700">angry</text><text x="84" y="291" fill="#abb2bf"> (score: 3.42, confidence: 56%)</text>
+    <text x="46" y="323" fill="#858b95">0: Not angry               [------------------------] 2.0%</text>
+    <text x="46" y="351" fill="#858b95">1: Slightly angry          [------------------------] 2.0%</text>
+    <text x="46" y="379" fill="#858b95">2: Moderately angry        [█-----------------------] 4.0%</text>
+    <text x="46" y="407" fill="#858b95">3: Very angry              [█████████---------------] 36.0%</text>
+    <text x="46" y="435" fill="#98c379">4: Extremely angry         [██████████████----------] 56.0%</text>
+  </g>
+</svg>
