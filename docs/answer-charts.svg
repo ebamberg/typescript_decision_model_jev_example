@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="466" viewBox="0 0 900 466" role="img" aria-labelledby="title description">
-  <title id="title">Representative answer chart console output</title>
-  <desc id="description">Terminal-style output with refund, department, and angry score probability bars.</desc>
+  <title id="title">Synthetic answer chart console output</title>
+  <desc id="description">Terminal-style output showing a close 52 to 48 percent choice distribution highlighted in red, alongside yes/no and score charts.</desc>
   <rect width="900" height="466" rx="8" fill="#17191c"/>
   <path d="M0 8a8 8 0 0 1 8-8h884a8 8 0 0 1 8 8v34H0z" fill="#25282d"/>
   <circle cx="24" cy="21" r="6" fill="#e06c75"/>
@@ -12,9 +12,9 @@
     <text x="46" y="111" fill="#98c379">true        [</text><text x="183" y="111" fill="#98c379">██████████████████</text><text x="327" y="111" fill="#98c379">------] 77.0%</text>
     <text x="46" y="139" fill="#858b95">false       [</text><text x="183" y="139" fill="#858b95">██████</text><text x="231" y="139" fill="#858b95">------------------] 23.0%</text>
 
-    <text x="28" y="185" fill="#56b6c2" font-weight="700">department</text><text x="142" y="185" fill="#abb2bf"> (selected: billing, confidence: 100%)</text>
-    <text x="46" y="217" fill="#98c379">billing     [</text><text x="183" y="217" fill="#98c379">████████████████████████</text><text x="375" y="217" fill="#98c379">] 100.0%</text>
-    <text x="46" y="245" fill="#858b95">technical   [</text><text x="183" y="245" fill="#858b95">------------------------] 0.0%</text>
+    <text x="28" y="185" fill="#56b6c2" font-weight="700">department</text><text x="142" y="185" fill="#abb2bf"> (selected: billing, confidence: 52%, close top probabilities)</text>
+    <text x="46" y="217" fill="#ff6b6b">billing     [</text><text x="183" y="217" fill="#ff6b6b">████████████</text><text x="279" y="217" fill="#ff6b6b">------------] 52.0%</text>
+    <text x="46" y="245" fill="#ff6b6b">technical   [</text><text x="183" y="245" fill="#ff6b6b">████████████</text><text x="279" y="245" fill="#ff6b6b">------------] 48.0%</text>
 
     <text x="28" y="291" fill="#56b6c2" font-weight="700">angry</text><text x="84" y="291" fill="#abb2bf"> (score: 3.42, confidence: 56%)</text>
     <text x="46" y="323" fill="#858b95">0: Not angry               [------------------------] 2.0%</text>

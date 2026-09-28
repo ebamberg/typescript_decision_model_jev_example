@@ -37,6 +37,6 @@ To compile the TypeScript source, run `npm run build`.
 
 ## Example Output
 
-Representative chart output for yes/no, choice, and score answers. Values are illustrative.
+Synthetic chart output for yes/no, choice, and score answers. The choice example shows two close probabilities highlighted in red.
 
 ![Terminal output with probability charts for refund, department, and score answers](docs/answer-charts.svg)

@@ -18,6 +18,7 @@ export function printAnswerCharts(answers: Record<string, JevAnswer>) {
     const barWidth = 24;
     const useColor = Boolean(process.stdout.isTTY);
     const green = '\x1b[32m';
+    const red = '\x1b[1;31m';
     const gray = '\x1b[90m';
     const titleStyle = useColor ? '\x1b[1;36m' : '';
     const reset = '\x1b[0m';
@@ -52,7 +53,16 @@ export function printAnswerCharts(answers: Record<string, JevAnswer>) {
             details = ` (score: ${answer.score.toFixed(2)}, confidence: ${(answer.confidence * 100).toFixed(0)}%)`;
         }
 
-        const highest = Math.max(...values.map(([, probability]) => probability));
+        const rankedValues = [...values].sort((left, right) => right[1] - left[1]);
+        const highest = rankedValues[0]?.[1] ?? 0;
+        const closeTopTwo = rankedValues.length > 1
+            && highest - rankedValues[1][1] <= 0.1;
+        const closeLabels = new Set(closeTopTwo ? rankedValues.slice(0, 2).map(([label]) => label) : []);
+        if (closeTopTwo) {
+            details = details
+                ? `${details.slice(0, -1)}, close top probabilities)`
+                : ' (close top probabilities)';
+        }
         console.log(`${titleStyle}${question}${titleStyle ? reset : ''}${details}`);
 
         for (const [label, probability] of values) {
@@ -60,7 +70,13 @@ export function printAnswerCharts(answers: Record<string, JevAnswer>) {
             const filled = Math.round(percentage * barWidth);
             const bar = `${'█'.repeat(filled)}${'-'.repeat(barWidth - filled)}`;
             const isHighest = probability === highest;
-            const color = useColor ? (isHighest ? green : gray) : '';
+            const color = useColor
+                ? closeLabels.has(label)
+                    ? red
+                    : isHighest
+                        ? green
+                        : gray
+                : '';
             const clear = color ? reset : '';
             console.log(`  ${color}${label.padEnd(12)} [${bar}] ${(percentage * 100).toFixed(1)}%${clear}`);
         }
