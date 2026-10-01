@@ -15,9 +15,9 @@
     "typescript-json-schema": "^0.68.0"
   },
   "allowScripts": {
-    "@openrouter/sdk@1.2.71": true,
     "esbuild@0.28.2": true,
-    "protobufjs@7.6.6": true
+    "protobufjs@7.6.6": true,
+    "@openrouter/sdk@1.3.33": true
   },
   "name": "typescript-jev",
   "version": "1.0.0",
