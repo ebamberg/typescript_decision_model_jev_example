@@ -35,6 +35,15 @@ npm start
 
 To compile the TypeScript source, run `npm run build`.
 
+## Examples
+
+The project includes a few small decision-model examples:
+
+- `email_triage`: classify an incoming email and recommend the right handling path.
+- `tool_approval`: judge planned tool calls such as `read_doc` and `bash` to decide whether they are destructive or need confirmation before execution.
+
+The app entry point in `src/app.ts` runs both examples in sequence when you start the project.
+
 ## Example Output
 
 Synthetic chart output for yes/no, choice, and score answers. The choice example shows two close probabilities highlighted in red.
