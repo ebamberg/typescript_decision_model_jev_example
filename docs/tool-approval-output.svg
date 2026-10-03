@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="470" viewBox="0 0 900 470" role="img" aria-labelledby="title description">
+  <title id="title">Synthetic tool approval output</title>
+  <desc id="description">Terminal-style output showing two planned tool calls and model checks for destructive actions and required confirmation.</desc>
+  <rect width="900" height="470" rx="8" fill="#17191c"/>
+  <path d="M0 8a8 8 0 0 1 8-8h884a8 8 0 0 1 8 8v34H0z" fill="#25282d"/>
+  <circle cx="24" cy="21" r="6" fill="#e06c75"/>
+  <circle cx="46" cy="21" r="6" fill="#e5c07b"/>
+  <circle cx="68" cy="21" r="6" fill="#98c379"/>
+  <text x="450" y="26" text-anchor="middle" fill="#abb2bf" font-family="Segoe UI, sans-serif" font-size="13">tool approval</text>
+  <g font-family="Consolas, 'Courier New', monospace" font-size="16">
+    <text x="28" y="78" fill="#56b6c2" font-weight="700">=== TOOL APPROVAL ===</text>
+    <text x="28" y="106" fill="#abb2bf">Planned tool calls</text>
+    <text x="46" y="134" fill="#e5c07b">0</text><text x="78" y="134" fill="#abb2bf">read_doc</text><text x="174" y="134" fill="#abb2bf">finance/dunning-policy.md</text>
+    <text x="46" y="162" fill="#e5c07b">1</text><text x="78" y="162" fill="#abb2bf">bash</text><text x="174" y="162" fill="#e06c75">rm -rf *</text>
+
+    <text x="28" y="207" fill="#56b6c2" font-weight="700">destructive_0</text>
+    <text x="46" y="235" fill="#98c379">FALSE 99%</text><text x="145" y="235" fill="#abb2bf">[●────]</text><text x="225" y="235" fill="#858b95">TRUE 1%</text>
+    <text x="28" y="271" fill="#56b6c2" font-weight="700">confirmation_required_0</text>
+    <text x="46" y="299" fill="#98c379">FALSE 94%</text><text x="145" y="299" fill="#abb2bf">[●────]</text><text x="225" y="299" fill="#858b95">TRUE 6%</text>
+    <text x="28" y="335" fill="#56b6c2" font-weight="700">destructive_1</text>
+    <text x="46" y="363" fill="#858b95">FALSE 1%</text><text x="145" y="363" fill="#abb2bf">[────●]</text><text x="225" y="363" fill="#98c379">TRUE 99%</text>
+    <text x="28" y="399" fill="#56b6c2" font-weight="700">confirmation_required_1</text>
+    <text x="46" y="427" fill="#858b95">FALSE 2%</text><text x="145" y="427" fill="#abb2bf">[────●]</text><text x="225" y="427" fill="#98c379">TRUE 98%</text>
+  </g>
+</svg>

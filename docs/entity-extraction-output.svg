@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="760" viewBox="0 0 900 760" role="img" aria-labelledby="title description">
+  <title id="title">Synthetic entity extraction output</title>
+  <desc id="description">Terminal-style answer charts followed by an invoice object. The order number is marked inconfident because its answer confidence is below 60 percent.</desc>
+  <rect width="900" height="760" rx="8" fill="#17191c"/>
+  <path d="M0 8a8 8 0 0 1 8-8h884a8 8 0 0 1 8 8v34H0z" fill="#25282d"/>
+  <circle cx="24" cy="21" r="6" fill="#e06c75"/>
+  <circle cx="46" cy="21" r="6" fill="#e5c07b"/>
+  <circle cx="68" cy="21" r="6" fill="#98c379"/>
+  <text x="450" y="26" text-anchor="middle" fill="#abb2bf" font-family="Segoe UI, sans-serif" font-size="13">entity extraction</text>
+  <g font-family="Consolas, 'Courier New', monospace" font-size="15">
+    <text x="28" y="77" fill="#56b6c2" font-weight="700">=== ENTITY EXTRACTION ===</text>
+
+    <text x="28" y="111" fill="#56b6c2" font-weight="700">invoice_number</text><text x="170" y="111" fill="#abb2bf">(score: 0.04, confidence: 96%)</text>
+    <text x="46" y="137" fill="#98c379">0: INV-2026-1042           [██████████████████████--] 91.0%</text>
+    <text x="46" y="159" fill="#858b95">1: ORD-58319                [█-----------------------] 4.0%</text>
+    <text x="46" y="181" fill="#858b95">2: INV-2026-1042            [█-----------------------] 4.0%</text>
+    <text x="46" y="203" fill="#858b95">3: None of the above        [------------------------] 1.0%</text>
+
+    <text x="28" y="237" fill="#56b6c2" font-weight="700">total_due</text><text x="125" y="237" fill="#abb2bf">(score: 0.02, confidence: 98%)</text>
+    <text x="46" y="263" fill="#98c379">0: €1,248.50                [████████████████████████] 99.0%</text>
+    <text x="46" y="285" fill="#858b95">1: None of the above        [------------------------] 1.0%</text>
+
+    <text x="28" y="319" fill="#56b6c2" font-weight="700">order_number</text><text x="160" y="319" fill="#abb2bf">(score: 1.53, confidence: 55%)</text>
+    <text x="46" y="345" fill="#858b95">0: INV-2026-1042            [------------------------] 0.0%</text>
+    <text x="46" y="367" fill="#98c379">1: ORD-58319                [██████████████████------] 73.0%</text>
+    <text x="46" y="389" fill="#858b95">2: INV-2026-1042            [------------------------] 0.0%</text>
+    <text x="46" y="411" fill="#858b95">3: ORD-58319                [██████------------------] 26.0%</text>
+    <text x="46" y="433" fill="#858b95">4: None of the above        [------------------------] 1.0%</text>
+
+    <text x="28" y="467" fill="#56b6c2" font-weight="700">billing_email</text><text x="160" y="467" fill="#abb2bf">(score: 0.01, confidence: 99%)</text>
+    <text x="46" y="493" fill="#98c379">0: billing@example.com      [████████████████████████] 100.0%</text>
+    <text x="46" y="515" fill="#858b95">1: alex.morgan@example.com  [------------------------] 0.0%</text>
+    <text x="46" y="537" fill="#858b95">2: accounts@example.com     [------------------------] 0.0%</text>
+    <text x="46" y="559" fill="#858b95">3: None of the above        [------------------------] 0.0%</text>
+
+    <text x="28" y="599" fill="#56b6c2" font-weight="700">INVOICE</text>
+    <text x="28" y="625" fill="#56b6c2">+----------------+---------------------+</text>
+    <text x="28" y="651" fill="#abb2bf">| Invoice number | <tspan fill="#98c379">INV-2026-1042</tspan>        |</text>
+    <text x="28" y="677" fill="#abb2bf">| Order number   | <tspan fill="#e5c07b">inconfident</tspan>          |</text>
+    <text x="28" y="703" fill="#abb2bf">| Total due      | <tspan fill="#98c379">€1,248.50</tspan>            |</text>
+    <text x="28" y="729" fill="#abb2bf">| Billing email  | <tspan fill="#98c379">billing@example.com</tspan> |</text>
+  </g>
+</svg>
