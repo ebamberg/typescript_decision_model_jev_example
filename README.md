@@ -39,9 +39,9 @@ To compile the TypeScript source, run `npm run build`.
 
 The project includes a few small decision-model examples:
 
-- `src/examples/email_triage`: classify an incoming email and recommend the right handling path.
-- `src/examples/steps_security_validation`: judge planned tool calls such as `read_doc` and `bash` to decide whether they are destructive or need confirmation before execution.
-- `src/examples/entity_extraction`: extract invoice fields from a document and print the resulting invoice.
+- `src/examples/email_triage`: classify a support email and recommend how to handle it.
+- `src/examples/steps_security_validation`: assess tool calls for destructive actions and confirmation needs.
+- `src/examples/entity_extraction`: extract invoice details and flag low-confidence fields.
 
 The app entry point in `src/app.ts` runs all three examples in sequence when you start the project.
 
@@ -51,12 +51,18 @@ The screenshots below are synthetic terminal output for each example.
 
 ### Email Triage
 
+Classifies a support email and recommends how to handle it.
+
 ![Synthetic email triage output with probability charts for refund, department, and customer sentiment](docs/answer-charts.svg)
 
 ### Tool Approval
 
+Assesses tool calls for destructive actions and confirmation needs.
+
 ![Synthetic tool approval output showing checks for two planned tool calls](docs/tool-approval-output.svg)
 
 ### Entity Extraction
+
+Extracts invoice details and flags low-confidence fields.
 
 ![Synthetic entity extraction output with probability charts and a completed invoice](docs/entity-extraction-output.svg)
